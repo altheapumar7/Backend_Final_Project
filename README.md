@@ -1,23 +1,32 @@
-# 🎓 Student Management System - Backend API (IT15/L Final Project)
+# Student Management System - Backend
 
-This is the RESTful API backend developed as a final requirement for IT15/L. It handles data management, authentication, and serves data to the React frontend.
+Laravel RESTful API backend for the Student Management System.
+Built as a final requirement for IT15/L — Integrative Programming.
 
-## 🚀 Features
-* **Authentication**: Secure Login/Logout using Laravel Sanctum.
-* **Database Management**: Handles Students, Courses, and Attendance records.
-* **RESTful Endpoints**: Serves data for Dashboard stats and CRUD operations.
+## Setup Instructions
+```bash
+cd laravel-backend
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve
+```
 
-## 🛠️ Technologies Used
-* **Framework**: Laravel 11
-* **Database**: MySQL (XAMPP)
-* **Tools**: Composer, Artisan CLI
+## Environment Variables
 
----
+Configure your `.env` file:
+```
+DB_DATABASE=your_db_name
+DB_USERNAME=root
+DB_PASSWORD=your_password
+```
 
-## ⚙️ Setup Instructions
+## API Base URL
+http://127.0.0.1:8000/api
 
-### Backend Setup (Laravel)
-
-1. **Navigate to the folder:**
-   ```bash
-   cd backend
+## Built With
+- PHP ^8.1
+- Laravel ^10.x
+- Laravel Sanctum ^3.x
+- MySQL ^8.0
